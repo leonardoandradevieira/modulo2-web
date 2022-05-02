@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicação para treinador</title>
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "https://upload.wikimedia.org/wikipedia/commons/b/b1/Pok%C3%A9ball.png"/>
+
+    <style>
+        h2 {
+            padding: 1em;
+            border-radius: 1em;
+            align-items: center;
+            margin: 0 auto;
+            width: 400px;
+        }
+        form {
+            margin: 0 auto;
+            width: 400px;
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+        }
+        input:focus, textarea:focus {
+            border-color: #000;
+        }
+        textarea {
+            vertical-align: top;
+            height: 5em;
+            resize: vertical;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2> Aplicação para treinador Pokemon</h2>
+   <form>
+       <fieldset style="width: 350px;">
+            <legend>Dados do treinador</legend>
+
+            <label for="nome">Nome do treinador:<br></label>
+            <input type="text" id="nome" name="treinador_nome"/>
+            <br>
+
+            <label for="idade">Idade:<br></label>
+            <input type="number" id="idade" name="treinador_idade" style="width: 3em"/>
+            <br>
+
+            <label for="data">Data de nascimento:<br></label>
+            <input type="date" id="data " name="nascimento" />
+            <br>
+
+            <label for="genero">Gênero:<br></label>
+            <input type="radio" id="opcao1" name="escolha"/>
+            <label for="opcao1" id="genero">Masculino</label>
+            <input type="radio" id="opcao2" name="escolha"/>
+            <label for="opcao2" id="genero">Feminino</label>
+            <input type="radio" id="opcao3" name="escolha"/>
+            <label for="opcao3">Outro</label>
+            <input type="text" id="genero" name="outro_genero" size="7">
+            <br>
+        </fieldset>
+
+        <fieldset style="width: 350px;">
+            <legend>Sobre o mundo pokemon</legend>
+            <table>
+            Escolha um inicial:
+            <br>
+
+            <tr>
+            <th><input type="radio" id="grama" name="starter"/></th>
+            <th><input type="radio" id="fogo" name="starter"/></th>
+            <th><input type="radio" id="agua" name="starter"/></th>
+            </tr>
+            <br>
+
+            <tr>
+            <td><label class="grama"  for="grama"><img src="https://archives.bulbagarden.net/media/upload/thumb/2/21/001Bulbasaur.png/100px-001Bulbasaur.png" alt="bulbasar"/></label></td>           
+            <td><label  class="fogo" for="fogo"><img src="https://archives.bulbagarden.net/media/upload/thumb/7/73/004Charmander.png/100px-004Charmander.png" alt="charmander"/></label></td>            
+            <td><label  class="agua" for="agua"><img src="https://archives.bulbagarden.net/media/upload/thumb/3/39/007Squirtle.png/100px-007Squirtle.png" alt="squirtle"/><br></label></td>
+            </tr>
+
+            <tr>
+            <th><label for="grama">Bulbasaur</label></th>
+            <th><label for="fogo">Charmander</label></th>
+            <th><label for="agua">Squirtle</label></th>
+            </tr>
+            </table>
+
+            <br>
+            O que você deseja?
+            <br>
+            <input type="checkbox" id="1" name="desejo"/>
+            <label for="1">Ser um mestre pokemon.</label>
+            <br>
+            <input type="checkbox" id="2" name="desejo"/>
+            <label for="2">Capturar todos os pokemon.</label>
+            <br>
+            <input type="checkbox" id="3" name="desejo"/>
+            <label for="3">Ser líder de ginásio.</label>
+            <br>
+            <input type="checkbox" id="4" name="desejo"/>
+            <label for="4">Ser o maior coordenador pokemon.</label>
+            <br>
+            <input type="checkbox" id="5" name="desejo"/>
+            <label for="5">Ser criador pokemon.</label>
+            <br>
+            <input type="checkbox" id="6" name="desejo"/>
+            <label for="6">Ser professor pokemon.</label>
+            <br>
+            <input type="checkbox" id="7" name="desejo"/>
+            <label for="7">Ser médico pokemon.</label>
+            <br>
+            <input type="checkbox" id="8" name="desejo"/>
+            <label for="8">Ser observador pokemon.</label>
+            <br>
+
+            <br>
+            Quanto você gosta de pokemon?
+            <br>
+            <input type="range" name="gosta"/>
+        </fieldset>
+        
+        <fieldset style="width: 350px;">
+            <legend>Finalizando</legend>
+            Escolha uma senha:
+            <br>
+            <input type="password" name="senha"/>
+            <br>
+
+            <br>
+            <input type="hidden" name="dataenvio"/>
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetar</button>
+        </fieldset>
+
+   </form> 
+</body>
+</html>
