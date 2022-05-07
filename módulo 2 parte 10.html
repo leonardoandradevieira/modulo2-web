@@ -1,0 +1,85 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+    <h1>Tag &ltcanvas&gt</h1>
+    Exemplo de uso da tag canvas:
+    <br>
+    <canvas id="canvas" width="150" height="200">
+        No support.
+    </canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const context = canvas.getContext('2d');
+        var redgradient = context.createRadialGradient (45,45,0,75,75,50);
+        redgradient.addColorStop (0, 'white');
+        redgradient.addColorStop (1, 'red');
+        var graygradient = context.createRadialGradient (50,120,5,160,160,80);
+        graygradient.addColorStop (0, 'white');
+        graygradient.addColorStop (1, 'gray');
+        context.fillStyle = 'black';
+        context.fillRect (0,0,150,200);
+        context.fillStyle = 'white';        context.fillRect (2,2,146,196);
+        context.fillStyle = graygradient;
+        context.beginPath();
+        context.moveTo (60,125);
+        context.quadraticCurveTo (90,125,115,107);
+        context.quadraticCurveTo (139,110,145,125);
+        context.quadraticCurveTo (145,145,115,147);
+        context.quadraticCurveTo (35,150,47,117);
+        context.fill();
+        context.closePath;
+        context.fillStyle = redgradient;
+        context.beginPath();
+        context.moveTo (25,75);
+        context.quadraticCurveTo (30,30,75,25);
+        context.quadraticCurveTo (120,30,125,75);
+        context.quadraticCurveTo (75,110,25,75);
+        context.fill();
+        context.closePath;       
+        context.fillStyle = 'black';
+        context.lineWidth = 3.0;
+        context.beginPath();
+        context.moveTo (125,75);
+        context.quadraticCurveTo (75,110,25,75);
+        context.stroke();
+        context.fillStyle = 'black';
+        context.beginPath();
+        context.arc(75,90,10,0,360);
+        context.fill();
+        context.fillStyle = 'black';
+        context.lineWidth = 3.0;
+        context.beginPath();
+        context.arc(75,75,50,0,360);
+        context.stroke(); 
+        context.fillStyle = 'rgb(128,128,128,0.6)';
+        context.beginPath();
+        context.moveTo (75,125);
+        context.quadraticCurveTo (130,120,125,60);
+        context.quadraticCurveTo (110,110,75,125);
+        context.fill();
+        context.closePath;
+        context.fillStyle = 'white';
+        context.beginPath();
+        context.arc(75,90,7,0,360);
+        context.fill();
+        context.fillStyle = 'black';
+        context.lineWidth = 1.0;
+        context.beginPath();
+        context.arc(75,90,5,0,360);
+        context.stroke();
+        context.fillStyle='yellow';
+        context.textAlign = 'center';
+        context.font='37px fantasy';
+        context.fillText('Pokémon',75,190);
+        context.strokeStyle='blue';
+        context.lineWidth = 2.0;
+        context.textAlign = 'center';
+        context.font='37px fantasy';
+        context.strokeText('Pokémon',75,190);
+    </script>
+</body>
+</html>
